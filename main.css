@@ -1,0 +1,51 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100%;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: lightblue;
+}
+
+main {
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: slategrey;
+
+  font-size: xx-large;
+}
+
+header div {
+  margin: 0 auto;
+}
+
+.id-photo {
+  max-height: 30vh;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+}
