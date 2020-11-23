@@ -6,7 +6,7 @@
 :root {
   /* CSS HEX */
   --tea-green: rgb(249, 253, 239);
-  --beau-blue: rgba(187, 209, 234, 0.171);
+  --beau-blue: rgba(187, 209, 234, 0.4);
   --white: #fff;
   --black: #000;
 
@@ -32,6 +32,10 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: #004ba8;
 }
 
 .id-photo {
@@ -84,7 +88,7 @@ section h4 {
 }
 
 section div {
-  margin: 40px 0;
+  margin: 0 0 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -105,10 +109,10 @@ li {
   margin: 6px 0;
 }
 
-li span {
+.year {
   font-family: monospace;
   color: white;
-  background-color: rgba(8, 14, 37, 0.288);
+  background-color: rgba(60, 60, 60);
   padding: 4px 6px;
   border-radius: 4px;
 }
@@ -140,8 +144,10 @@ li span {
 }
 
 .skill-list ul li {
+  display: flex;
+  flex-wrap: wrap;
   font-weight: 700;
-  background-color: black;
+  background-color: rgba(60, 60, 60);
   color: rgb(255, 255, 255);
   border-radius: 6px 4px 8px 4px;
   padding: 6px 8px;
@@ -159,10 +165,20 @@ li span {
   margin: 0;
 }
 
+.skill-list a {
+  display: flex;
+  align-items: center;
+}
+
+.skill-list a img {
+  height: 1.2rem;
+  margin-right: 8px;
+}
+
 .skill-list li p {
   font-weight: 100;
   text-align: end;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .inline-list {
@@ -190,7 +206,7 @@ li span {
 .title {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: stretch;
   word-wrap: break-word;
   word-break: normal;
