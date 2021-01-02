@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;1,100&family=Roboto:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&family=Viga&display=swap");
 
 :root {
@@ -73,9 +73,10 @@ section {
   border-left: solid 2px rgba(5, 12, 26, 0.082);
   border-bottom: solid 2px rgba(5, 12, 26, 0.082);
   background-color: var(--beau-blue);
+  border-radius: 2px;
   margin: 30px 0 0 0;
   padding-left: 40px;
-  padding-right: 6px;
+  padding-right: 20px;
 }
 
 #first-section {
@@ -105,16 +106,32 @@ ul {
 
 li {
   font-size: 1.1rem;
-  /* letter-spacing: -1px; */
   margin: 6px 0;
 }
 
 .year {
+  position: relative;
+  top: 11px;
+  left: -11px;
   font-family: monospace;
   color: white;
   background-color: rgba(60, 60, 60);
   padding: 4px 6px;
   border-radius: 4px;
+  margin: 0;
+  width: fit-content;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 6px;
+  margin: 0 0 10px 0;
+  border-radius: 2px;
+  border: solid 1px white;
+  background-color: rgba(255, 255, 255, 0.582);
 }
 
 .side-bar {
@@ -196,7 +213,6 @@ li {
   font-weight: 100;
   text-align: center;
   display: inline-block;
-  /* flex-grow: 1; */
   color: white;
   background-color: #004ba8;
   border-radius: 4px;
@@ -233,7 +249,6 @@ h2 {
   color: #004ba8;
   font-size: 2rem;
   line-height: 2rem;
-  /* margin: 30px auto; */
 }
 
 h3 {
@@ -253,19 +268,20 @@ h5 {
   margin: 0 0 20px 0;
 }
 
-/* .past-present-heading {
-  padding: 0;
-  line-height: 1rem;
-  border-right: 0px;
-  border-left: 0px;
-} */
-
 .notnow {
-  display: inline;
+  display: block;
   margin: 0;
   padding: 0;
   text-decoration: line-through;
   margin-right: 20px;
+}
+.now {
+  display: inline;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: small;
+  margin: auto 0 0 0;
+  padding: 0;
 }
 
 footer {
@@ -287,10 +303,38 @@ footer {
 
 @media (max-device-width: 518px) {
   .wrapper {
-    max-width: 1024px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: auto;
+  }
+  .id-photo {
+    display: flex;
+    flex-direction: column;
+  }
+  .id-photo img {
+    width: 60%;
+    align-self: center;
+  }
+  .title {
+    margin: 0 auto;
+  }
+  .side-bar {
+    margin-bottom: 60px;
+  }
+  .content {
+  }
+  * {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-device-width: 244px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
     column-gap: auto;
   }
   .id-photo {
