@@ -40,12 +40,42 @@ a {
 
 .id-photo {
   width: 100%;
+    border-radius: 100%;
+  animation: headbangy 0.4s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .id-photo img {
-  border-radius: 8px;
+  border-radius: 50%;
+  background-color: var(--beau-blue);
+  border: 5px solid  #004ba8;
   width: 100%;
+  animation: headbang 1.2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
 }
+
+@-webkit-keyframes headbang {
+  0% { transform: rotate(-6deg)  }
+  50% { transform: rotate(4deg) scale(104%)  }
+  100% { transform: rotate(-6deg)  }
+}
+
+@keyframes headbang {
+  0% { transform: rotate(-6deg)  }
+  50% { transform: rotate(4deg) scale(104%) }
+  100% { transform: rotate(-6deg)  }
+}
+
+@-webkit-keyframes headbangy {
+  0% { transform:  translate(-1px) }
+  50% { transform:  translate(1px) }
+  100% { transform:  translate(-1px); }
+}
+
+@keyframes headbangy {
+  0% { transform:  translate(-1px) }
+  50% { transform:  translate(1px) }
+  100% { transform:  translate(-1px); }
+}
+
 
 .wrapper {
   max-width: 1024px;
@@ -342,7 +372,7 @@ footer {
     flex-direction: column;
   }
   .id-photo img {
-    width: 60%;
+    /* width: 60%; */
     align-self: center;
   }
   .title {
