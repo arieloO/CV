@@ -40,40 +40,48 @@ a {
 
 .id-photo {
   width: 100%;
-    border-radius: 100%;
-  animation: headbangy 0.4s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 50%;
+position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .id-photo img {
-  border-radius: 50%;
-  background-color: var(--beau-blue);
-  border: 5px solid  #004ba8;
-  width: 100%;
-  animation: headbang 1.2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+  z-index: 2;
+  align-self: center;
+  width: 65%;
 }
 
-@-webkit-keyframes headbang {
-  0% { transform: rotate(-6deg)  }
-  50% { transform: rotate(4deg) scale(104%)  }
-  100% { transform: rotate(-6deg)  }
+.id-photo:hover .circleneck {
+animation: headbangy 1.2s infinite linear;
+}
+.id-photo:hover img:hover {
+   animation: headbang 2.4s infinite linear;
+ }
+
+.circleneck {
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  left: 25px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: var(--beau-blue);
+  border: 3px solid  #004ba8;
+  transform-origin: 49.5% 49.5%;
 }
 
 @keyframes headbang {
-  0% { transform: rotate(-6deg)  }
-  50% { transform: rotate(4deg) scale(104%) }
-  100% { transform: rotate(-6deg)  }
+  0% { transform: rotate(-1deg)  }
+  50% { transform: rotate(3deg) scale(0.98) }
+  100% { transform: rotate(-1deg)  }
 }
 
-@-webkit-keyframes headbangy {
-  0% { transform:  translate(-1px) }
-  50% { transform:  translate(1px) }
-  100% { transform:  translate(-1px); }
-}
 
 @keyframes headbangy {
-  0% { transform:  translate(-1px) }
-  50% { transform:  translate(1px) }
-  100% { transform:  translate(-1px); }
+  0% { transform:   rotate(0deg);}
+  100% { transform:   rotate(360deg) }
 }
 
 
@@ -149,6 +157,7 @@ li {
   padding: 4px 6px;
   border-radius: 4px;
   margin: 0;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -303,13 +312,14 @@ h5 {
   margin: 0;
   padding: 0;
   text-decoration: line-through;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .now {
   display: inline;
-
+  text-align: right;
   font-family: "Permanent Marker", cursive;
   font-size: small;
+  font-size: 0.8em;
   margin: auto 0 0 0;
   padding: 0;
 }
