@@ -21,6 +21,10 @@
   --text: "Quicksand";
 }
 
+* {
+  font-size: 1em;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -39,9 +43,8 @@ a {
 }
 
 .id-photo {
-  width: 100%;
-    border-radius: 50%;
-position: relative;
+  border-radius: 50%;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -49,7 +52,7 @@ position: relative;
 .id-photo img {
   z-index: 2;
   align-self: center;
-  width: 65%;
+  width: 146px;
 }
 
 .id-photo:hover .circleneck {
@@ -63,9 +66,9 @@ animation: headbangy 1.2s infinite linear;
   position: absolute;
   z-index: 1;
   bottom: -20px;
-  left: 25px;
-  width: 180px;
-  height: 180px;
+  left: -15px;
+  min-width: 180px;
+  min-height: 180px;
   border-radius: 50%;
   background-color: var(--beau-blue);
   border: 3px solid  #004ba8;
@@ -89,7 +92,7 @@ animation: headbangy 1.2s infinite linear;
   max-width: 1024px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: auto;
 }
 
@@ -173,6 +176,9 @@ li {
   background-color: rgba(255, 255, 255, 0.582);
 }
 
+#photo-div,
+#name-age,
+#links,
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -183,7 +189,9 @@ li {
   padding: 16px;
 }
 
+
 .break {
+  display: none;
   height: 1px;
   border-radius: 90% 4px 90% 4px;
   border: solid 1px rgba(0, 0, 0, 0.363);
@@ -215,9 +223,14 @@ li {
     0px 0px 2px 0px var(--tea-green);
 }
 
+#name-age h1,
+#links h1,
 .side-bar h1 {
   margin: 0;
 }
+
+#name-age h4,
+#links h4,
 .side-bar h4 {
   margin: 0;
 }
@@ -230,6 +243,17 @@ li {
 .skill-list a img {
   height: 1.2rem;
   margin-right: 8px;
+}
+
+.skill-list li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-list li span{
+  text-align: start;
+  margin: 0 20px 0 0;
 }
 
 .skill-list li p {
@@ -264,7 +288,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
   word-break: normal;
 }
 
@@ -331,84 +355,120 @@ footer {
   border-top: solid 2px black;
 }
 
-/* @media (min-width: 769px) {
-  .wrapper {
+  #photo-div{
+    order: 1;
+    grid-column: span 2;
+    margin: 0 auto;
   }
-  .side-bar {
+  #name-age{
+    justify-content: space-around;
+    grid-column: span 2;
+    order: 2;
   }
-  .content {
-    font-size: x-small;
+  #cv-title{
+    order: 3;
+    grid-column: span 2;
   }
-} */
+  #links{
+    order: 4;
+    grid-column: span 2;
+  }
+  #main-content{
+    order: 5;
+    grid-column: span 2;
+  }
+  #code-skills{
+    order: 6;
+    grid-column: span 1;
+    margin: 0 auto;
+  }
+  #code-tools{
+    order: 7;
+    grid-column: span 1;
+    margin: 0 auto;
+  }
+  #languages{
+    order: 8;
+    grid-column: span 2;
+    margin: 0 auto;
+  }
+  #hobbies{
+    order: 9;
+    grid-column: span 2;
+    margin: 0 auto;
+  }
 
-@media (max-device-width: 518px) {
-  .wrapper {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: auto;
-  }
-  .id-photo {
-    display: flex;
-    flex-direction: column;
-  }
-  .id-photo img {
-    width: 60%;
-    align-self: center;
-  }
-  .title {
-    margin: 0 auto;
-  }
-  .side-bar {
-    margin-bottom: 60px;
-  }
-  .content {
-  }
+@media (min-width: 640px ) {
   * {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 20vw 3fr;
+    grid-template-areas: "img title"
+                          "name main"
+                          "links main"
+                          "skills main"
+                          "tools main"
+                          "lang main"
+                          "hob main";
+      grid-auto-flow: column;
+      column-gap: 20px;
+  }
+  
+  .side-bar {
+    width: 100%
+  }
+
+  .break {
+  display: none;
+  }
+
+  #photo-div{
+    order: 1;
+    grid-area: "img";
+    /* grid-column: span 1; */
+  }
+  #name-age{
+    /* justify-content: space-around; */
+    order: 2;
+    grid-area: "name";
+    max-height: 300px;
+  }
+  #cv-title{
+    order: 8;
+    grid-area: "title";
+    grid-row: 1;
+    grid-column: span 3;
+  }
+  #links{
+    order: 3;
+    grid-area: "links";
+    /* grid-column: span 1; */
+  }
+  #main-content{
+    order: 9;
+    grid-area: "main";
+    grid-row: span 6;
+  }
+  #code-skills{
+    order: 4;
+    grid-area: "skills";
+    /* grid-column: span 1; */
+  }
+  #code-tools{
+    order: 5;
+    grid-area: "tools";
+    /* grid-column: span 1; */
+  }
+  #languages{
+    order: 6;
+    grid-area: "lang";
+    /* grid-column: span 1; */
+  }
+  #hobbies{
+    order: 7;
+    grid-area: "hob";
+    /* grid-column: span 1; */
   }
 }
-
-@media (max-device-width: 244px) {
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: auto;
-  }
-  .id-photo {
-    display: flex;
-    flex-direction: column;
-  }
-  .id-photo img {
-    /* width: 60%; */
-    align-self: center;
-  }
-  .title {
-    margin: 0 auto;
-  }
-  .side-bar {
-    margin-bottom: 60px;
-  }
-  .content {
-  }
-  * {
-    font-size: 1.2rem;
-  }
-}
-
-/* @media (max-width: 640px) {
-  .wrapper {
-    max-width: 640px;
-    flex-direction: column;
-    width: 100%;
-  }
-  .side-bar {
-    max-width: 25vw;
-    min-width: 25vw;
-  }
-  .content {
-    max-width: 60vw;
-  }
-} */

@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ariel Levy - Developeur Junior</title>
 
     <link rel="stylesheet" href="main.css" />
@@ -18,7 +18,7 @@
 
       <!------------------- PHOTO ------------------->
 
-      <div class="side-bar">
+      <div id="photo-div">
         <div class="id-photo">
           <div class="circleneck"></div>
           <img src="photoofmecut2.png" />
@@ -28,16 +28,18 @@
 
       <!------------------- TITLE ------------------->
 
-      <div class="content title">
+      <div class="content title" id="cv-title">
         <div>
-          <h1>Developeur web junior</h1>
+          <h1>junior web dev</h1>
           <h2>Front-end - ReactJS</h2>
         </div>
       </div>
 
       <!------------------- SIDE CONTENT ------------------->
 
-      <div class="side-bar">
+      <!-- <div class="side-bar"></div> -->
+
+      <div id="name-age">
         <h1>Ariel</h1>
 
         <!-- me -->
@@ -49,8 +51,10 @@
 
         <div class="break"></div>
         
-        <!-- links -->
+      </div>
 
+        <!-- links -->
+      <div id="links">
         <div class="skill-list">
           <a href="https://github.com/arieloO"
             ><img src="github-icon.svg" />
@@ -71,9 +75,9 @@
         </div>
 
         <div class="break"></div>
-
+      </div>
         <!-- programation -->
-
+<div class="side-bar" id="code-skills">
         <div class="skill-list">
           <h5>programation</h5>
           <ul>
@@ -84,10 +88,11 @@
             <li>react-redux</li>
           </ul>
         </div>
+        </div>
         <div class="break"></div>
 
         <!-- outils -->
-
+<div class="side-bar" id="code-tools">
         <div class="skill-list">
           <h5>outils</h5>
           <ul>
@@ -97,35 +102,37 @@
             <li>eslint - prettier</li>
           </ul>
         </div>
+        </div>
         <div class="break"></div>
 
         <!-- langues -->
-
+<div class="side-bar" id="languages">
         <div class="skill-list">
           <h5>langues</h5>
           <ul>
             <li>
-              français
+              <span>français</span>
               <p>langue natale</p>
             </li>
             <li>
-              espagnol - bilingue
+              <span>espagnol - bilingue</span>
               <p>six ans en Colombie</p>
             </li>
             <li>
-              anglais - courant
+              <span>anglais - courant</span>
               <p>bon niveau oral et écrit</p>
             </li>
             <li>
-              portugais - courant
+              <span>portugais - courant</span>
               <p>six ans au Brésil</p>
             </li>
           </ul>
         </div>
+        </div>
         <div class="break"></div>
 
         <!-- hobbies -->
-
+<div class="side-bar" id="hobbies">
         <div class="skill-list">
           <h5>hobbies</h5>
           <ul>
@@ -148,7 +155,7 @@
 
       <!------------------- MAIN CONTENT ------------------->
 
-      <div class="content">
+      <div class="content" id="main-content">
         <h3 class="past-present-heading">le monde d'après : developeur</h3>
 
         <section id="first-section">
@@ -257,10 +264,11 @@
           </div>
         </section>
       </div>
+    </div>
 
       <!------------------- FOOTER ------------------->
 
-    </div>
     <footer>Ariel Levy - 2020</footer>
+
   </body>
 </html>
