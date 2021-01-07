@@ -56,10 +56,10 @@ a {
 }
 
 .id-photo:hover .circleneck {
-animation: headbangy 1.2s infinite linear;
+animation: headbangy 3.4s infinite linear;
 }
-.id-photo:hover img:hover {
-   animation: headbang 2.4s infinite linear;
+.id-photo:hover img {
+   animation: headbang 6.8s infinite linear;
  }
 
 .circleneck {
@@ -76,9 +76,14 @@ animation: headbangy 1.2s infinite linear;
 }
 
 @keyframes headbang {
-  0% { transform: rotate(-1deg)  }
-  50% { transform: rotate(3deg) scale(0.98) }
-  100% { transform: rotate(-1deg)  }
+  0% { transform: rotate(0deg) }
+  17% { transform: rotate(-3deg) scale(1.02)}
+  33% { transform: rotate(3deg) }
+  50% { transform: rotate(-2deg) }
+  66% { transform: rotate(0deg) scale(1.03)}
+  83% { transform: rotate(-5deg) scale(1.01)}
+  100%{ transform: rotate(0deg) }
+
 }
 
 
@@ -106,7 +111,6 @@ animation: headbangy 1.2s infinite linear;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-left: 16px;
   padding: 16px;
 }
 
@@ -182,10 +186,10 @@ li {
 .side-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: stretch;
   text-align: left;
-  margin: 0 auto;
+  margin: 0 ;
   padding: 16px;
 }
 
@@ -416,8 +420,9 @@ footer {
       column-gap: 20px;
   }
   
+
   .side-bar {
-    width: 100%
+    min-width: 100%
   }
 
   .break {
@@ -454,21 +459,21 @@ footer {
   #code-skills{
     order: 4;
     grid-area: "skills";
-    /* grid-column: span 1; */
+    /* grid-column: 1; */
   }
   #code-tools{
     order: 5;
     grid-area: "tools";
-    /* grid-column: span 1; */
+    /* grid-column: 1; */
   }
   #languages{
     order: 6;
     grid-area: "lang";
-    /* grid-column: span 1; */
+    /* grid-column: 1; */
   }
   #hobbies{
     order: 7;
     grid-area: "hob";
-    /* grid-column: span 1; */
+    /* grid-column: 1; */
   }
 }
