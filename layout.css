@@ -1,0 +1,117 @@
+#image-container {
+  grid-area: imag;
+}
+#name-age {
+  grid-area: name;
+}
+.title {
+  grid-area: titl;
+}
+.links {
+  grid-area: link;
+}
+#main-content {
+  grid-area: main;
+}
+#seg-content {
+  grid-area: segu;
+}
+
+#side1 {
+  grid-area: sid1;
+}
+
+#side2 {
+  grid-area: sid2;
+}
+#side1,
+#side2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+  gap: 16px;
+}
+
+/* #code-skills {
+  grid-area: "skil";
+}
+#code-tools {
+  grid-area: "tool";
+}
+#languages {
+  grid-area: "lang";
+}
+#hobbies {
+  grid-area: "hobb";
+} */
+
+footer {
+  grid-area: "foot";
+  grid-row-end: -1;
+  grid-column-end: -1;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-areas:
+    "imag name"
+    "imag link"
+    "titl titl"
+    "main main"
+    "sid1 sid1"
+    "segu segu"
+    "sid2 sid2"
+    "foot foot";
+  gap: 16px;
+}
+
+.wrapper > * {
+  padding: 16px;
+  justify-content: start;
+}
+
+@media (min-width: 640px) {
+  * {
+    font-size: 1rem;
+  }
+  .content {
+    grid-column: -2 / -1;
+  }
+  #cv-title {
+  }
+  #image-container {
+  }
+  #name-age {
+  }
+
+  #side1,
+  #side2 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .wrapper {
+    grid-template-columns: minmax(220px, 1fr) 3fr;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+      "imag titl"
+      "name main"
+      "link main"
+      "sid1 main"
+      "sid1 main"
+      "sid2 segu"
+      "foot foot";
+    column-gap: 20px;
+  }
+
+  .break {
+    display: none;
+  }
+}

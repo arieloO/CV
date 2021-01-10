@@ -2,33 +2,34 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ariel Levy - Developeur Junior</title>
 
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="photo.css" />
   </head>
 
   <!------------------- BODY ------------------->
 
   <body>
-
     <!------------------- GRID WRAPPER ------------------->
 
     <div class="wrapper">
-
       <!------------------- PHOTO ------------------->
 
-      <div id="photo-div">
-        <div class="id-photo">
-          <div class="circleneck"></div>
-          <img src="photoofmecut2.png" />
-          
+      <div id="image-container">
+        <div>
+          <div class="id-photo">
+            <div class="circleneck"></div>
+            <img src="photoofmecut2.png" />
+          </div>
         </div>
       </div>
 
       <!------------------- TITLE ------------------->
 
-      <div class="content title" id="cv-title">
+      <div class="title">
         <div>
           <h1>junior web dev</h1>
           <h2>Front-end - ReactJS</h2>
@@ -44,121 +45,44 @@
 
         <!-- me -->
 
-        <div class="skill-list">
-          <h4>vingt-huit ans</h4>
-          <h4>92130 - Issy</h4>
-        </div>
-
-        <div class="break"></div>
-        
+        <h4>vingt-huit ans</h4>
+        <h4>92130 - Issy</h4>
       </div>
 
-        <!-- links -->
-      <div id="links">
-        <div class="skill-list">
-          <a href="https://github.com/arieloO"
-            ><img src="github-icon.svg" />
-            <h4>github</h4></a
-          >
-          <a href="https://teamtreehouse.com/arieloo"
-            ><img src="treehouse-icon.svg" />
-            <h4>treehouse</h4></a
-          >
-          <a href="https://codewars.com/users/arieloO"
-            ><img src="codewars-icon.svg" />
-            <h4>codewars</h4></a
-          >
-          <a href="https://linkedin.com/in/ariel-levy-webdev"
-            ><img src="linkedin-icon.svg" />
-            <h4>linkedin</h4></a
-          >
-        </div>
+      <!-- links -->
 
-        <div class="break"></div>
-      </div>
-        <!-- programation -->
-<div class="side-bar" id="code-skills">
-        <div class="skill-list">
-          <h5>programation</h5>
-          <ul>
-            <li>javascript - es6</li>
-            <li>html5 - css3</li>
-            <li>react.js</li>
-            <li>next.js</li>
-            <li>react-redux</li>
-          </ul>
-        </div>
-        </div>
-        <div class="break"></div>
+      <div class="links">
+        <!-- <div> -->
+        <a href="https://github.com/arieloO">
+          <img src="github-icon.svg" />
+          <h4>github</h4>
+        </a>
 
-        <!-- outils -->
-<div class="side-bar" id="code-tools">
-        <div class="skill-list">
-          <h5>outils</h5>
-          <ul>
-            <li>vs code</li>
-            <li>git - github</li>
-            <li>nmp</li>
-            <li>eslint - prettier</li>
-          </ul>
-        </div>
-        </div>
-        <div class="break"></div>
+        <a href="https://teamtreehouse.com/arieloo">
+          <img src="treehouse-icon.svg" />
+          <h4>treehouse</h4>
+        </a>
 
-        <!-- langues -->
-<div class="side-bar" id="languages">
-        <div class="skill-list">
-          <h5>langues</h5>
-          <ul>
-            <li>
-              <span>français</span>
-              <p>langue natale</p>
-            </li>
-            <li>
-              <span>espagnol - bilingue</span>
-              <p>six ans en Colombie</p>
-            </li>
-            <li>
-              <span>anglais - courant</span>
-              <p>bon niveau oral et écrit</p>
-            </li>
-            <li>
-              <span>portugais - courant</span>
-              <p>six ans au Brésil</p>
-            </li>
-          </ul>
-        </div>
-        </div>
-        <div class="break"></div>
+        <a href="https://codewars.com/users/arieloO">
+          <img src="codewars-icon.svg" />
+          <h4>codewars</h4>
+        </a>
 
-        <!-- hobbies -->
-<div class="side-bar" id="hobbies">
-        <div class="skill-list">
-          <h5>hobbies</h5>
-          <ul>
-            <li>musique</li>
-            <li>séries</li>
-            <li>podcasts</li>
-            <li>jeux-vidéos</li>
-            <li>cuisine</li>
-            <li>
-              <span class="notnow">natation</span>
-              <span class="now">jeux de plateau</span>
-            </li>
-            <li>
-              <span class="notnow">randonées</span>
-              <span class="now">pains maison</span>
-            </li>
-          </ul>
-        </div>
+        <a href="https://linkedin.com/in/ariel-levy-webdev">
+          <img src="linkedin-icon.svg" />
+          <h4>linkedin</h4>
+        </a>
+        <!-- </div> -->
+
+        <!-- <div class="break"></div> -->
       </div>
 
       <!------------------- MAIN CONTENT ------------------->
 
       <div class="content" id="main-content">
-        <h3 class="past-present-heading">le monde d'après : developeur</h3>
+        <h3>le monde d'après : developeur</h3>
 
-        <section id="first-section">
+        <section>
           <h4>le developement web, en autodidacte</h4>
           <div>
             <div class="year">2017</div>
@@ -222,8 +146,9 @@
             </ul>
           </div>
         </section>
-
-        <h3 class="past-present-heading">le monde d'avant : ingénieur son</h3>
+      </div>
+      <div class="content" id="seg-content">
+        <h3>le monde d'avant : ingénieur son</h3>
 
         <section>
           <h4>freelance depuis 2017</h4>
@@ -264,11 +189,85 @@
           </div>
         </section>
       </div>
+
+      <!------------------- SIDE CONTENT ------------------->
+
+      <!-- programation -->
+
+      <div id="side1">
+        <div class="skill-list" id="code-skills">
+          <h5>programation</h5>
+          <ul>
+            <li>javascript - es6</li>
+            <li>html5 - css3</li>
+            <li>react.js</li>
+            <li>next.js</li>
+            <li>react-redux</li>
+          </ul>
+        </div>
+        <!-- <div class="break"></div> -->
+
+        <!-- outils -->
+        <div class="skill-list" id="code-tools">
+          <h5>outils</h5>
+          <ul>
+            <li>vs code</li>
+            <li>git - github</li>
+            <li>nmp</li>
+            <li>eslint - prettier</li>
+          </ul>
+        </div>
+        <!-- <div class="break"></div> -->
+      </div>
+      <div id="side2">
+        <!-- langues -->
+        <div class="skill-list" id="languages">
+          <h5>langues</h5>
+          <ul>
+            <li>
+              <span>français</span>
+              <p>langue natale</p>
+            </li>
+            <li>
+              <span>espagnol - bilingue</span>
+              <p>six ans en Colombie</p>
+            </li>
+            <li>
+              <span>anglais - courant</span>
+              <p>bon niveau oral et écrit</p>
+            </li>
+            <li>
+              <span>portugais - courant</span>
+              <p>six ans au Brésil</p>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="break"></div> -->
+
+        <!-- hobbies -->
+        <div class="skill-list" id="hobbies">
+          <h5>hobbies</h5>
+          <ul>
+            <li>musique</li>
+            <li>séries</li>
+            <li>podcasts</li>
+            <li>jeux-vidéos</li>
+            <li>cuisine</li>
+            <li>
+              <span class="notnow">natation</span>
+              <span class="now">jeux de plateau</span>
+            </li>
+            <li>
+              <span class="notnow">randonées</span>
+              <span class="now">pains maison</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-      <!------------------- FOOTER ------------------->
+    <!------------------- FOOTER ------------------->
 
-    <footer>Ariel Levy - 2020</footer>
-
+    <footer>Ariel Levy - 2021</footer>
   </body>
 </html>
