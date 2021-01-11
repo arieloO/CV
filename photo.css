@@ -5,69 +5,77 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: stretch; */
-  /* align-items: center; */
-}
-
-.id-photo {
-  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  width: 154px;
   height: 208px;
-  /* margin: 16px; */
+  cursor: grab;
 }
 
 .id-photo img {
   z-index: 2;
   align-self: center;
-  width: 146px;
+  width: 208px;
+  height: 208px;
+  /* transform-origin: 50% 100%; */
 }
 
 .id-photo:hover .circleneck {
-  animation: headbangy 2.2s infinite linear;
+  animation: headbangy 4s infinite linear;
 }
 .id-photo:hover img {
-  animation: headbang 6.6s infinite linear;
+  animation: headbang 20s infinite linear;
 }
 
 .circleneck {
   position: absolute;
   z-index: 1;
   bottom: -20px;
-  left: -14px;
   width: 180px;
   height: 180px;
   border-radius: 50%;
   background-color: var(--beau-blue);
   border: 3px solid #004ba8;
-  transform-origin: 49.4% 49.4%;
+  transform-origin: 49.5% 50.5%;
 }
 
 @keyframes headbang {
   0% {
     transform: rotate(0deg);
+    transform-origin: 50% 10%;
   }
   17% {
     transform: rotate(-3deg) scale(1.02);
+    transform-origin: 50% 80%;
   }
   33% {
     transform: rotate(3deg);
+    transform-origin: 50% 20%;
   }
   50% {
     transform: rotate(-2deg) scale(1.03);
   }
   66% {
     transform: rotate(0deg);
+    transform-origin: 50% 80%;
   }
   83% {
     transform: rotate(-5deg) scale(1.01);
+    transform-origin: 50% 20%;
   }
   100% {
     transform: rotate(0deg);
+    transform-origin: 50% 90%;
   }
 }
 
 @keyframes headbangy {
   0% {
     transform: rotate(0deg);
+  }
+  50% {
+    transform-origin: 49% 51%;
   }
   100% {
     transform: rotate(360deg);

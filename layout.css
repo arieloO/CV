@@ -1,3 +1,8 @@
+.wrapper > * {
+  padding: 16px;
+  justify-content: start;
+}
+
 #image-container {
   grid-area: imag;
 }
@@ -6,10 +11,24 @@
 }
 .title {
   grid-area: titl;
+  justify-content: space-between;
+}
+.subtitle {
+  grid-area: subt;
 }
 .links {
   grid-area: link;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
 }
+
+@media (max-width: 540px) {
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 #main-content {
   grid-area: main;
 }
@@ -53,26 +72,22 @@ footer {
 
 .wrapper {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 8px;
   padding: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
     "imag name"
-    "imag link"
     "titl titl"
+    "subt subt"
+    "link link"
     "main main"
     "sid1 sid1"
     "segu segu"
     "sid2 sid2"
     "foot foot";
-  gap: 16px;
-}
-
-.wrapper > * {
-  padding: 16px;
-  justify-content: start;
+  gap: 48px;
 }
 
 @media (min-width: 640px) {
@@ -85,8 +100,14 @@ footer {
   #cv-title {
   }
   #image-container {
+    /* padding: 2px auto 2px 2px; */
+    padding: 16px;
   }
   #name-age {
+  }
+
+  .links {
+    grid-template-columns: 1fr;
   }
 
   #side1,
@@ -96,12 +117,16 @@ footer {
     align-items: stretch;
     padding: 16px;
   }
-
+  body {
+    width: 100%;
+  }
   .wrapper {
-    grid-template-columns: minmax(220px, 1fr) 3fr;
+    width: 100%;
+    grid-template-columns: minmax(220px, 2fr) minmax(600px, 5fr);
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-areas:
       "imag titl"
+      "imag subt"
       "name main"
       "link main"
       "sid1 main"
