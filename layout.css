@@ -32,6 +32,8 @@
   padding: 16px;
 }
 
+/* ------- TINY DISPLAY ------- */
+
 @media (max-width: 540px) {
   .links {
     grid-template-columns: repeat(2, 1fr);
@@ -41,6 +43,7 @@
     padding: 0 auto;
   }
 }
+/* ------- ------------- ------- */
 
 #main-content {
   grid-area: main;
@@ -87,6 +90,8 @@ footer {
   gap: 8px;
 }
 
+/* ------- DESKTOP DISPLAY ------- */
+
 @media (min-width: 640px) {
   /* * {
     font-size: 1rem;
@@ -100,10 +105,6 @@ footer {
     padding: 16px;
     justify-content: start;
   }
-
-  /* .content {
-    grid-column: -2 / -1;
-  } */
 
   #image-container {
     display: flex;

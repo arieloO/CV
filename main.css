@@ -19,8 +19,6 @@
   --headings: "Viga";
   --sub-headings: "Viga";
   --text: "Quicksand";
-
-  /* background-color: blanchedalmond; */
 }
 
 * {
@@ -144,37 +142,12 @@ section div {
   padding: 16px;
 }
 
-/* .break {
-  display: none;
-  height: 1px;
-  border-radius: 90% 4px 90% 4px;
-  border: solid 1px rgba(0, 0, 0, 0.363);
-  width: 60%;
-  margin: 20px auto;
-} */
-
-/* SIDE CONTENT */
-
-/* #name-age {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-} */
-
 #name-age div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
 }
-
-/* .links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-} */
 
 .links a {
   display: flex;
@@ -190,7 +163,6 @@ section div {
 .skill-list {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: stretch;
 }
 
