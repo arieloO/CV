@@ -223,7 +223,12 @@ section div {
   margin: 0 0 0 auto;
 }
 
-h1,
+h1 {
+  font-family: var(--headings);
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
   font-family: var(--headings);
   font-size: 0.8rem;
@@ -237,7 +242,11 @@ h5 {
   font-family: var(--sub-headings);
 }
 
-h1 {
+.title h1 {
+  font-size: 2.75rem;
+}
+
+#name-age h1 {
   font-size: 3.5rem;
 }
 

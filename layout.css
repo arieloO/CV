@@ -7,6 +7,7 @@
   grid-area: imag;
   justify-content: center;
   padding-bottom: 26px;
+  padding-right: 26px;
 }
 #name-age {
   grid-area: name;
@@ -35,6 +36,10 @@
   .links {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .wrapper {
+    padding: 0 auto;
+  }
 }
 
 #main-content {
@@ -59,10 +64,6 @@
   gap: 16px;
 }
 
-#hobbies ul li {
-  /* justify-content: flex-start; */
-}
-
 footer {
   grid-area: foot;
 }
@@ -74,7 +75,6 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
-    "imag titl"
     "imag titl"
     "name name"
     "subt subt"
@@ -88,8 +88,12 @@ footer {
 }
 
 @media (min-width: 640px) {
-  * {
+  /* * {
     font-size: 1rem;
+  } */
+
+  .title h1 {
+    font-size: 3.5rem;
   }
 
   .wrapper > div {
