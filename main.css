@@ -261,11 +261,13 @@ h5 {
   display: block;
   margin: 0;
   padding: 0;
-  text-decoration: line-through rgba(60, 60, 60) 2px;
-
-  text-decoration-skip: none;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(0, 0, 0, 0.58);
+  text-decoration-style: solid;
   margin-right: 6px;
 }
+
 .old-hobbie .now {
   display: inline;
   text-align: end;
