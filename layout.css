@@ -147,8 +147,8 @@ footer {
   }
 
   .wrapper {
-    width: 100%;
-    grid-template-columns: minmax(220px, 2fr) minmax(600px, 5fr);
+    /* width: 100%; */
+    grid-template-columns: minmax(220px, 2fr) minmax(300px, 5fr);
     grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-areas:
       "imag titl"
