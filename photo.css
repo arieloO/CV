@@ -23,10 +23,12 @@
 }
 
 .id-photo:hover .circleneck {
-  animation: headbangy 4s infinite linear;
+  animation: headbangy 3s infinite linear;
+  will-change: transform, transform-origin;
 }
 .id-photo:hover img {
-  animation: headbang 20s infinite linear;
+  animation: headbang 15s infinite linear;
+  will-change: transform, transform-origin;
 }
 
 .circleneck {
