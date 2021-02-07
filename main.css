@@ -261,7 +261,8 @@ h5 {
   display: block;
   margin: 0;
   padding: 0;
-  text-decoration: line-through double rgba(60, 60, 60) 1px;
+  text-decoration: line-through rgba(60, 60, 60) 2px;
+
   text-decoration-skip: none;
   margin-right: 6px;
 }
