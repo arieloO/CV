@@ -290,19 +290,17 @@ footer {
 }
 
 .print {
-  display: none;
+  /* display: none; */
 }
 
-.print h4 {
-  display: none;
+.print h4,
+.print img {
+  /* display: none; */
 }
 
 @media print {
   .print {
     display: block;
-    background-color: white;
-    text-align: center;
-    margin: 0 auto;
   }
 
   .print h4 {
