@@ -290,12 +290,12 @@ footer {
 }
 
 .print {
-  /* display: none; */
+  display: none;
 }
 
 .print h4,
 .print img {
-  /* display: none; */
+  display: none;
 }
 
 @media print {
