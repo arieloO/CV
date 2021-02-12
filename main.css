@@ -288,3 +288,19 @@ footer {
   justify-content: center;
   border-top: solid 2px black;
 }
+
+.print {
+  display: none;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+.print h4 {
+  font-size: medium;
+}
+
+@media print {
+  .print {
+    display: block;
+  }
+}
