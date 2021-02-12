@@ -291,16 +291,21 @@ footer {
 
 .print {
   display: none;
-  background-color: white;
-  text-align: center;
-  margin: 0 auto;
 }
+
 .print h4 {
-  font-size: medium;
+  display: none;
 }
 
 @media print {
   .print {
     display: block;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .print h4 {
+    font-size: medium;
   }
 }
