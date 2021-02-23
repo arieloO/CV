@@ -26,7 +26,7 @@
 .links {
   grid-area: link;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
   column-gap: 16px;
   padding: 16px;
   margin-bottom: 16px;
@@ -77,6 +77,10 @@
   gap: 16px;
 }
 
+.skill-list:last-child {
+  margin-top: 22px;
+}
+
 footer {
   grid-area: foot;
 }
@@ -89,7 +93,7 @@ footer {
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
     "imag titl"
-    "name subt"
+    "name titl"
     "link link"
     "sid1 sid1"
     "main main"
@@ -132,7 +136,7 @@ footer {
 
   .wrapper > .title {
     padding-top: 36px;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .wrapper > .subtitle {
@@ -162,9 +166,8 @@ footer {
     grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-areas:
       "imag titl"
-      "imag subt"
+      "imag link"
       "imag ..."
-      "name link"
       "name main"
       "sid1 main"
       "sid2 main"

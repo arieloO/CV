@@ -66,6 +66,10 @@ li {
   padding: 16px;
 }
 
+#main-content {
+  margin-top: 0px;
+}
+
 section {
   border-left: solid 2px rgba(5, 12, 26, 0.082);
   border-bottom: solid 2px rgba(5, 12, 26, 0.082);
@@ -168,11 +172,12 @@ section div {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-right: 16px;
 }
 
 .links a img {
   height: 1.2rem;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 
 .skill-list {
@@ -235,7 +240,8 @@ h5 {
 }
 
 #name-age h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
 }
 
 h2 {
