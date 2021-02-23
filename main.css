@@ -293,6 +293,12 @@ footer {
   display: none;
 }
 
+.links .print {
+  opacity: 0;
+  display: none;
+  height: 0;
+}
+
 .print h4,
 .print img {
   display: none;
