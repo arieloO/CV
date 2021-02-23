@@ -3,31 +3,46 @@
   justify-content: center;
 }
 
+.wrapper > .title {
+  justify-content: flex-start;
+}
+
+.wrapper > .links {
+  justify-content: space-between;
+}
+
 #image-container {
   grid-area: imag;
   justify-content: center;
   padding-bottom: 26px;
   padding-right: 26px;
 }
+
 #name-age {
   grid-area: name;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  column-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
 }
 
 .title {
   grid-area: titl;
   padding-top: 26px;
 }
+
 .subtitle {
   grid-area: subt;
   margin: auto 0;
 }
+
 .links {
   grid-area: link;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1fr, 2fr));
-  column-gap: 16px;
+  column-gap: 16px; */
   padding: 16px;
   margin-bottom: 16px;
 }
@@ -36,7 +51,7 @@
 
 @media (max-width: 540px) {
   .links {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 
   .wrapper {
@@ -77,10 +92,6 @@
   gap: 16px;
 }
 
-.skill-list:last-child {
-  margin-top: 22px;
-}
-
 footer {
   grid-area: foot;
 }
@@ -93,7 +104,7 @@ footer {
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
     "imag titl"
-    "name titl"
+    "name name"
     "link link"
     "sid1 sid1"
     "main main"
@@ -116,7 +127,7 @@ footer {
 
   .wrapper > div {
     padding: 16px;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   #image-container {
@@ -144,7 +155,7 @@ footer {
   }
 
   .links {
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(5, auto); */
     margin-bottom: 0px;
   }
 
@@ -154,6 +165,10 @@ footer {
     justify-content: space-around;
     align-items: stretch;
     padding: 16px;
+  }
+
+  .skill-list:last-child {
+    margin-top: 22px;
   }
 
   body {

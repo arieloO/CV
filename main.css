@@ -40,6 +40,7 @@ body {
 
 a {
   color: #004ba8;
+  text-decoration: none;
 }
 
 ul {
@@ -223,10 +224,35 @@ h1 {
 }
 
 h2 {
+  display: inline-block;
   font-family: var(--headings);
-  font-size: 0.8rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
+}
+
+.heading-block {
+  position: relative;
+}
+
+.heading-fill {
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  color: white;
+  text-shadow: 3px 3px 3px #004ba8;
+}
+
+.heading-stroke {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #004ba8;
 }
 
 h3,
@@ -244,12 +270,6 @@ h5 {
   line-height: 2.5rem;
 }
 
-h2 {
-  color: #004ba8;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-
 h3 {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -257,15 +277,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
 h5 {
-  color: #004ba8;
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0 0 20px 0;
+  letter-spacing: 2px;
 }
 
 .old-hobbie {
@@ -319,6 +339,10 @@ footer {
 }
 
 @media print {
+  a {
+    text-decoration: underline #004ba8;
+  }
+
   .links {
     grid-template-columns: repeat(5, auto);
   }
