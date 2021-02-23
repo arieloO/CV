@@ -313,11 +313,30 @@ footer {
 }
 
 @media print {
-  .print {
-    display: block;
+  .links {
+    grid-template-columns: repeat(5, auto);
   }
 
-  .print h4 {
-    font-size: medium;
+  .print {
+    display: inline-block;
+  }
+
+  .links .print {
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+  }
+
+  .print h4,
+  .print img {
+    display: inline-block;
+  }
+
+  .year,
+  .inline-list span,
+  .skill-list ul li,
+  .old-hobbie .now {
+    text-shadow: none;
+    border: 1px solid lightblue;
   }
 }
