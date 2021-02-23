@@ -28,8 +28,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 16px;
-
   padding: 16px;
+  margin-bottom: 16px;
 }
 
 /* ------- TINY DISPLAY ------- */
@@ -43,11 +43,21 @@
     padding: 0 auto;
   }
 }
+
+/* @media (max-width: 784px) and (min-width: 640px) {
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wrapper {
+    padding: 0 auto;
+  }
+} */
 /* ------- ------------- ------- */
 
 #main-content {
   grid-area: main;
-  margin-top: 46px;
+  /* margin-top: 46px; */
 }
 #seg-content {
   grid-area: segu;
@@ -79,20 +89,19 @@ footer {
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
     "imag titl"
-    "name name"
-    "subt subt"
+    "name subt"
     "link link"
-    "main main"
     "sid1 sid1"
-    "segu segu"
+    "main main"
     "sid2 sid2"
+    "segu segu"
     "foot foot";
   gap: 8px;
 }
 
 /* ------- DESKTOP DISPLAY ------- */
 
-@media (min-width: 640px) {
+@media (min-width: 784px) {
   /* * {
     font-size: 1rem;
   } */
@@ -131,7 +140,8 @@ footer {
   }
 
   .links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 0px;
   }
 
   #side1,
@@ -153,11 +163,13 @@ footer {
     grid-template-areas:
       "imag titl"
       "imag subt"
+      "imag ..."
+      "name link"
       "name main"
-      "link main"
       "sid1 main"
-      "sid1 main"
-      "sid2 segu"
+      "sid2 main"
+      "... main"
+      "... segu"
       "foot foot";
     column-gap: 32px;
     padding: 16px 32px;

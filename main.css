@@ -153,6 +153,10 @@ section div {
   padding: 16px;
 }
 
+#name-age {
+  padding: 16px;
+}
+
 #name-age div {
   display: flex;
   flex-direction: column;
