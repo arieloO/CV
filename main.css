@@ -114,6 +114,10 @@ section div {
   background-color: rgba(255, 255, 255, 0.582);
 }
 
+.exp-details {
+  margin-left: 1em;
+}
+
 .inline-list {
   margin-right: 40px;
   max-width: 500px;
