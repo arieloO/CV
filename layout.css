@@ -35,6 +35,14 @@
   margin: auto 0;
 }
 
+#resume {
+  grid-area: resm;
+  text-align: justify;
+}
+#resume p {
+  margin: 0;
+}
+
 .links {
   grid-area: link;
   display: flex;
@@ -107,6 +115,7 @@ footer {
     "name name"
     "link link"
     "sid1 sid1"
+    "resm resm"
     "main main"
     "sid2 sid2"
     "segu segu"
@@ -161,9 +170,9 @@ footer {
 
   #side1,
   #side2 {
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: stretch; */
     padding: 16px;
   }
 
@@ -181,13 +190,12 @@ footer {
     grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-areas:
       "imag titl"
-      "imag link"
-      "imag ..."
-      "name main"
+      "imag resm"
+      "name link"
       "sid1 main"
       "sid2 main"
-      "... main"
-      "... segu"
+      "sid2 main"
+      "segu segu"
       "foot foot";
     column-gap: 32px;
     padding: 16px 32px;
