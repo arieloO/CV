@@ -107,20 +107,46 @@ section div {
   width: fit-content;
 }
 
-.achievement {
+.achievements {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
-  padding: 6px;
-  margin: 0 0 10px 0;
+  padding: 0.5em;
+  margin: 0 0 1em 0;
   border-radius: 2px;
   border: solid 1px white;
   background-color: rgba(255, 255, 255, 0.582);
 }
 
+.achievements p {
+  margin: 0;
+}
+
+.achievements p::before {
+  content: "• ";
+  margin-right: 0.2em;
+  font-size: 0.8em;
+}
+
 .exp-details {
+  /* list-style: inside; */
+  /* list-style-type: circle; */
   margin-left: 1em;
+  margin-top: 0.6em;
+  margin-bottom: 1em;
+}
+
+.exp-details li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.exp-details li::before {
+  content: "∙ ";
+  margin-right: 0.1em;
+  font-size: 1em;
+  /* font-size: 0.8em; */
 }
 
 .inline-list {
@@ -292,9 +318,6 @@ h5 {
   line-height: 2rem;
   margin: 0 0 20px 0;
   letter-spacing: 2px;
-}
-
-.old-hobbie {
 }
 
 .old-hobbie .notnow {
